@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_tasks</title>
+</head>
+<body style="font-family: Arial, sans-serif;">
+
+    <!-- Task 1 -->
+    <h1 style="text-align: center;">Task 1</h1>
+    <table 
+        style="background-color: aquamarine; border-collapse: collapse; width: 100%; margin-bottom: 30px;" 
+        cellpadding="15" 
+        cellspacing="5"
+    >
+        <thead>
+            <tr>
+                <th style="border: 2px solid white;">Firstname</th>
+                <th style="border: 2px solid white;">Lastname</th>
+                <th style="border: 2px solid white;">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 2px solid white;">Jill</td>
+                <td style="border: 2px solid white;">Smith</td>
+                <td style="border: 2px solid white;">50</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid white;">Eve</td>
+                <td style="border: 2px solid white;">Jackson</td>
+                <td style="border: 2px solid white;">94</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid white;">John</td>
+                <td style="border: 2px solid white;">Doe</td>
+                <td style="border: 2px solid white;">80</td>
+            </tr>
+        </tbody>
+    </table>
+<hr>
+    <h1 style="text-align: center;">Task 2</h1>
+    <ul style="margin-left: 40px; margin-bottom: 30px;">
+        <li>Coffee</li>
+        <li>Tea
+            <ul type="circle" style="margin-left: 20px;">
+                <li>Green Tea</li>
+                <li>Black Tea</li>
+            </ul>
+        </li>
+        <li>Milk</li>
+    </ul>
+
+    <p style="margin-left: 40px;">Click any of the following links:</p>
+    <div style="margin-left: 40px; margin-bottom: 30px;">
+        <a href="#" target="_blank">Opens in New</a> |
+        <a href="#" target="_self">Opens in Self</a> |
+        <a href="#" target="_parent">Opens in Parent</a> |
+        <a href="#" target="_top">Opens in Body</a>
+    </div>
+<hr>
+
+    <h1 style="text-align: center;">Task 3</h1>
+
+<form action="#">
+    <table 
+        style="border: 1px solid black; border-collapse: collapse; width: 60%; margin: 0 auto;"
+        cellpadding="10"
+    >
+        <tr>
+            <td style="border: 1px solid black; width: 40%;"><label for="fname">First Name</label></td>
+            <td style="border: 1px solid black;"><input type="text" id="fname" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="lname">Last Name</label></td>
+            <td style="border: 1px solid black;"><input type="text" id="lname" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="email">Email</label></td>
+            <td style="border: 1px solid black;"><input type="email" id="email" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="password">Password</label></td>
+            <td style="border: 1px solid black;"><input type="password" id="password" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="repassword">Re-enter Password</label></td>
+            <td style="border: 1px solid black;"><input type="password" id="repassword" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">Gender</td>
+            <td style="border: 1px solid black;">
+                <input type="radio" name="gender" id="male"><label for="male"> Male</label>
+                <input type="radio" name="gender" id="female"><label for="female"> Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="age">Age</label></td>
+            <td style="border: 1px solid black;"><input type="number" id="age" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="phone">Phone Number</label></td>
+            <td style="border: 1px solid black;"><input type="tel" id="phone" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="address">Address</label></td>
+            <td style="border: 1px solid black;"><textarea id="address" rows="3" style="width: 100%;"></textarea></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="state">State</label></td>
+            <td style="border: 1px solid black;"><input type="text" id="state" style="width: 100%;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;"><label for="country">Country</label></td>
+            <td style="border: 1px solid black;">
+                <input type="text" id="country" list="countries" style="width: 100%;">
+                <datalist id="countries">
+                    <option value="India">
+                    <option value="USA">
+                    <option value="UK">
+                    <option value="Canada">
+                    <option value="Australia">
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">Languages Known</td>
+            <td style="border: 1px solid black;">
+                <input type="checkbox" id="english"><label for="english"> English</label>
+                <input type="checkbox" id="hindi"><label for="hindi"> Hindi</label>
+                <input type="checkbox" id="kannada"><label for="kannada"> Kannada</label>
+                <input type="checkbox" id="telugu"><label for="telugu"> Telugu</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border: 1px solid black;">
+                <input type="checkbox" id="declare">
+                <label for="declare">Hereby I declare that the above information is true and correct</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border: 1px solid black;">
+                Log in to <a href="https://www.acharya.ac.in" target="_blank">Acharya</a> website
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; border: 1px solid black;">
+                <button type="submit" style="padding: 8px 20px;">Register</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
