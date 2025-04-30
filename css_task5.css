@@ -8,11 +8,11 @@ body {
   }
   
   .login-form {
-    background-color: white;
+
     padding: 30px;
     border-radius: 10px;
     width: 320px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   }
   
   .form-header {
@@ -48,7 +48,7 @@ body {
   
   .form-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
   
@@ -77,10 +77,24 @@ body {
     color: #2196F3;
   }
   .user-avatar {
-    width: 80px;
-    height: 80px;
+    width: 200px; /* increased from 80px */
+    height: 200px;
     border-radius: 50%;
     display: block;
     margin: 0 auto 10px;
     object-fit: cover;
+  }
+  .full-width {
+    width: 100%;
+  }
+  
+  .form-buttons-secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .forgot-password {
+    margin: 0;
   }
