@@ -1,0 +1,43 @@
+/* task1.css */
+.heading-center {
+    text-align: center;
+  }
+  .task1-table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    width: 100%;
+    background-color: aquamarine;
+    margin-bottom: 30px;
+  }
+  .task1-table th,
+  .task1-table td {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .task1-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box-row {
+    display: flex;
+    margin-top: 20px;
+  }
+  .box {
+    height: 150px;
+    width: 200px;
+    border: 2px solid rgb(166, 210, 99);
+    margin: 10px;
+    border-radius: 20px;
+  }
+  .rounded-30 {
+    border-radius: 30px;
+  }
+  .circle {
+    border-radius: 50%;
+  }
+  .fancy-rounded {
+    border-radius: 10px 30px 10px 30px;
+  }
+  

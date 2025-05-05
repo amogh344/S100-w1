@@ -1,0 +1,21 @@
+/* Task 3 Table */
+.task3-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .task3-table th {
+    background-color: #009879;
+    color: white;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .task3-table td {
+    padding: 12px;
+  }
+  
+  .task3-table tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }

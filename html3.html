@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 3 - Registration Form</title>
+</head>
+<body style="font-family: Arial, sans-serif;">
+  <h1 style="text-align: center;">Task 3</h1>
+
+  <form action="#">
+    <table 
+      style="border: 1px solid black; border-collapse: collapse; width: 60%; margin: 0 auto;"
+      cellpadding="10"
+    >
+      <tr>
+        <td style="border: 1px solid black;"><label for="fname">First Name</label></td>
+        <td style="border: 1px solid black;"><input type="text" id="fname" style="width: 100%;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="lname">Last Name</label></td>
+        <td style="border: 1px solid black;"><input type="text" id="lname" style="width: 100%;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="email">Email</label></td>
+        <td style="border: 1px solid black;"><input type="email" id="email" style="width: 100%;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="password">Password</label></td>
+        <td style="border: 1px solid black;"><input type="password" id="password" style="width: 100%;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="repassword">Re-enter Password</label></td>
+        <td style="border: 1px solid black;"><input type="password" id="repassword" style="width: 100%;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;">Gender</td>
+        <td style="border: 1px solid black;">
+          <input type="radio" name="gender" id="male"><label for="male"> Male</label>
+          <input type="radio" name="gender" id="female"><label for="female"> Female</label>
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="age">Age</label></td>
+        <td style="border: 1px solid black;"><input type="number" id="age" style="width: 100%;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="phone">Phone Number</label></td>
+        <td style="border: 1px solid black;"><input type="tel" id="phone" style="width: 100%;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="address">Address</label></td>
+        <td style="border: 1px solid black;"><textarea id="address" rows="3" style="width: 100%;"></textarea></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="state">State</label></td>
+        <td style="border: 1px solid black;"><input type="text" id="state" style="width: 100%;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;"><label for="country">Country</label></td>
+        <td style="border: 1px solid black;">
+          <input type="text" id="country" list="countries" style="width: 100%;">
+          <datalist id="countries">
+            <option value="India">
+            <option value="USA">
+            <option value="UK">
+            <option value="Canada">
+            <option value="Australia">
+          </datalist>
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black;">Languages Known</td>
+        <td style="border: 1px solid black;">
+          <input type="checkbox" id="english"><label for="english"> English</label>
+          <input type="checkbox" id="hindi"><label for="hindi"> Hindi</label>
+          <input type="checkbox" id="kannada"><label for="kannada"> Kannada</label>
+          <input type="checkbox" id="telugu"><label for="telugu"> Telugu</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="border: 1px solid black;">
+          <input type="checkbox" id="declare">
+          <label for="declare">Hereby I declare that the above information is true and correct</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="border: 1px solid black;">
+          Log in to <a href="https://www.acharya.ac.in" target="_blank">Acharya</a> website
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center; border: 1px solid black;">
+          <button type="submit" style="padding: 8px 20px;">Register</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

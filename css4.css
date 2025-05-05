@@ -1,0 +1,43 @@
+/* Task 4 Side Navigation */
+.task4-container {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.task4-sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.task4-sidenav a {
+  margin: 10px 0;
+  padding: 10px 20px;
+  width: 160px;
+  text-decoration: none;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  transform: translateX(-110px);
+  transition: transform 0.3s ease;
+}
+
+.task4-sidenav a:hover {
+  transform: translateX(0);
+}
+
+.task4-sidenav .home {
+  background-color: #04AA6D;
+}
+
+.task4-sidenav .java {
+  background-color: #2196F3;
+}
+
+.task4-sidenav .css {
+  background-color: #f44336;
+}
+
+.task4-sidenav .html {
+  background-color: #555;
+}
