@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    .form-control-icon {
+      position: relative;
+    }
+
+    .form-control-icon i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+
+    .form-control-icon input,
+    .form-control-icon textarea,
+    .form-control-icon select {
+      padding-left: 2.25rem;
+    }
+
+    .form-error {
+      color: red;
+      font-size: 0.875rem;
+      display: none;
+      
+    }
+
+    .is-invalid + .form-error,
+    .form-check-input.is-invalid ~ .form-error {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <form id="contactForm" class="border p-4 rounded shadow-sm bg-light" novalidate>
+      <!-- First Name -->
+      <div class="row mb-3 align-items-center">
+        <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+        <div class="col-sm-9 form-control-icon">
+          <i class="fa fa-user"></i>
+          <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+          <div class="form-error">Please supply your first name</div>
+        </div>
+      </div>
+
+      <!-- Last Name -->
+      <div class="row mb-3 align-items-center">
+        <label for="lastName" class="col-sm-3 col-form-label">Last Name</label>
+        <div class="col-sm-9 form-control-icon">
+          <i class="fa fa-user"></i>
+          <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+          <div class="form-error">Please supply your last name</div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="row mb-3 align-items-center">
+        <label for="email" class="col-sm-3 col-form-label">E-Mail</label>
+        <div class="col-sm-9 form-control-icon">
+          <i class="fa fa-envelope"></i>
+          <input type="email" class="form-control" id="email" placeholder="E-Mail Address" required>
+          <div class="form-error">Please supply your email address</div>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="row mb-3 align-items-center">
+        <label for="phone" class="col-sm-3 col-form-label">Phone #</label>
+        <div class="col-sm-9 form-control-icon">
+          <i class="fa fa-phone"></i>
+          <input type="tel" class="form-control" id="phone" placeholder="(845)555-1212" required>
+          <div class="form-error">Please supply your phone number</div>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="row mb-3 align-items-center">
+        <label for="address" class="col-sm-3 col-form-label">Address</label>
+        <div class="col-sm-9 form-control-icon">
+          <i class="fa fa-home"></i>
+          <input type="text" class="form-control" id="address" placeholder="Address" required>
+          <div class="form-error">Please supply your street address</div>
+        </div>
+      </div>
+
+      <!-- City -->
+      <div class="row mb-3 align-items-center">
+        <label for="city" class="col-sm-3 col-form-label">City</label>
+        <div class="col-sm-9 form-control-icon">
+          <i class="fa fa-building"></i>
+          <input type="text" class="form-control" id="city" placeholder="City" required>
+          <div class="form-error">Please supply your city</div>
+        </div>
+      </div>
+
+      <!-- State -->
+      <div class="row mb-3 align-items-center">
+        <label for="state" class="col-sm-3 col-form-label">State</label>
+        <div class="col-sm-9 form-control-icon">
+          <i class="fa fa-list"></i>
+          <select class="form-select" id="state" required>
+            <option selected disabled value="">Please select your state</option>
+            <option value="AL">Alabama</option>
+            <option value="CA">California</option>
+            <option value="NY">New York</option>
+            <option value="TX">Texas</option>
+          </select>
+          <div class="form-error">Please supply your state</div>
+        </div>
+      </div>
+
+      <!-- Hosting -->
+      <div class="row mb-3 align-items-center">
+        <label class="col-sm-3 col-form-label">Do you have hosting?</label>
+        <div class="col-sm-9">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="hosting" id="hostingYes" value="yes" required>
+            <label class="form-check-label" for="hostingYes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="hosting" id="hostingNo" value="no">
+            <label class="form-check-label" for="hostingNo">No</label>
+          </div>
+          <div class="form-error">Please select an option</div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="row mb-4 align-items-center">
+        <label for="description" class="col-sm-3 col-form-label">Project Description</label>
+        <div class="col-sm-9 form-control-icon">
+          <i class="fa fa-pencil"></i>
+          <textarea class="form-control" id="description" rows="2" placeholder="Project Description" required></textarea>
+          <div class="form-error">Please provide a description</div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-warning px-4">
+          <i class="fa fa-paper-plane"></i> Send
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Form validation logic
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = e.target;
+      let isFormValid = true;
+
+      // Validate all inputs/selects/textarea
+      const fields = form.querySelectorAll('input, select, textarea');
+      fields.forEach(field => {
+        const isRadio = field.type === 'radio';
+        const group = form.querySelectorAll(`[name="${field.name}"]`);
+        if (isRadio && group.length > 1) {
+          const anyChecked = Array.from(group).some(r => r.checked);
+          group.forEach(radio => radio.classList.toggle('is-invalid', !anyChecked));
+          if (!anyChecked) isFormValid = false;
+        } else {
+          if (!field.checkValidity()) {
+            field.classList.add('is-invalid');
+            isFormValid = false;
+          } else {
+            field.classList.remove('is-invalid');
+          }
+        }
+      });
+
+      if (isFormValid) {
+        alert("Form submitted successfully!");
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
